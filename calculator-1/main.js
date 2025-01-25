@@ -1,7 +1,9 @@
 function calculatorF() {
+  
   const calculator = document.querySelector(".calculator-box");
   const mathOperation = document.querySelector(".m-operations");
   const mathResult = document.querySelector(".m-result");
+
 
   const fragment = document.createDocumentFragment();
 
@@ -14,18 +16,7 @@ function calculatorF() {
   }
   calculator.appendChild(fragment);
 
-  const numberOfC = [];
-
-  numberOfC.forEach((item) => {
-    const chosenE = document.querySelector(item.selector);
-    if (chosenE) {
-      chosenE.classList.add(item.class);
-      chosenE.textContent = item.value;
-      console.log(chosenE);
-    }
-  });
-
-  const oSimple2 = [
+  let oSimple2 = [
     { s: ".b-1", nC: "AC", v: "AC" },
     { s: ".b-2", nC: "AD", v: "AD" },
     { s: ".b-3", nC: "dote", v: "." },
@@ -47,6 +38,7 @@ function calculatorF() {
     { s: ".b-18", nC: "oneZero", v: "0" },
   ];
 
+
   oSimple2.forEach((item) => {
     const chosenE = document.querySelector(item.s);
     if (chosenE) {
@@ -56,20 +48,52 @@ function calculatorF() {
     }
   });
 
+  
+
   let lastTargeted = null;
 
   calculator.addEventListener("click", (event) => {
     if (event.target.classList.contains("box")) {
-      const eTargeted = event.target;
+      let eTargeted = event.target;
 
       if (lastTargeted) {
         lastTargeted.classList.remove("b-color");
       }
-
+      
       eTargeted.classList.add("b-color");
-      console.log(eTargeted);
-
       lastTargeted = eTargeted;
+    }
+    })
+
+
+  let operationString = "" ;
+
+  calculator.addEventListener("click", (event) => {
+    if (event.target.classList.contains("box")) {
+      let textC = event.target.textContent ; 
+
+      if (textC === "AC") {
+        // پاک کردن عملیات و نتیجه
+        operationString = "";
+        mathOperation.textContent = "";
+        mathResult.textContent = "";
+      } else if (textC === "=") {
+        // محاسبه نتیجه
+        try {
+          const result = eval(operationString); // محاسبه با eval
+          mathResult.textContent = result;
+        } catch (error) {
+          mathResult.textContent = "Error";
+        }
+      }else if (textC === "AD") {
+        // حذف آخرین کاراکتر
+        operationString = operationString.slice(0, -1);
+        mathOperation.textContent = operationString;
+      }else {
+        // اضافه کردن مقدار به رشته عملیات
+        operationString += textC;
+        mathOperation.textContent = operationString;
+      }
     }
   });
 }
