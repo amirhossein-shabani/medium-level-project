@@ -1,0 +1,122 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  width: 100%;
+  min-height: 100vh ; 
+  background-color: black;
+  color: lightgreen;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p{
+  margin-right: 30px;
+  font-weight: bold;
+}
+
+.clock{
+  width: 200px;
+  height: 200px;
+  border: 3px solid lightgreen;
+  border-radius: 50%;
+  position: relative;
+}
+
+.clock .number{
+  width: 100%;
+  height: 100%;
+  --num-rotation : 0 ; 
+  position: absolute;
+  transform: rotate(var(--num-rotation));
+  text-align: center;
+}
+.clock .number p{
+  font-size: 1.5rem;
+  transform: rotate(var(--num-rotation));
+  font-weight: 700;
+}
+
+.number.number-1{--num-rotation : 30deg}
+.number-1 p {--num-rotation : -30deg}
+
+.number.number-2{--num-rotation : 60deg}
+.number-2 p {--num-rotation : -60deg}
+
+.number.number-3{--num-rotation : 90deg}
+.number-3 p {--num-rotation : -90deg}
+
+.number.number-4{--num-rotation : 120deg}
+.number-4 p {--num-rotation : -120deg}
+
+.number.number-5{--num-rotation : 150deg}
+.number-5 p {--num-rotation : -150deg}
+
+.number.number-6{--num-rotation : 180deg}
+.number-6 p {--num-rotation : -180deg}
+
+.number.number-7{--num-rotation : 210deg}
+.number-7 p {--num-rotation : -210deg}
+
+.number.number-8{--num-rotation : 240deg}
+.number-8 p {--num-rotation : -240deg}
+
+.number.number-9{--num-rotation : 270deg}
+.number-9 p {--num-rotation : -270deg}
+
+.number.number-10{--num-rotation : 300deg}
+.number-10 p {--num-rotation : -300deg}
+
+.number.number-11{--num-rotation : 330deg}
+.number-11 p {--num-rotation : -330deg}
+
+
+.clock .hand{
+  --hand-rotation : 0 ;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%) rotate(calc(var(--hand-rotation) * 1deg));
+  transform-origin: bottom;
+  background-color: lightgreen;
+  border-top-left-radius:  5px;
+  border-top-right-radius:  5px;
+  z-index: 11;
+}
+.clock::after{
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: lightgreen;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  border-radius: 50%;
+  z-index: 12;
+}
+
+.clock .hand.second{
+  width: 2.5px;
+  height: 45%;
+  background-color: yellow;
+}
+
+.clock .hand.minute{
+  width: 6px;
+  height: 40%;
+  background-color: lightgreen;
+  border: 1px solid darkgreen;
+}
+
+.clock .hand.hour{
+  width: 10px;
+  height: 35%;
+  background-color: lightgreen;
+  border: 1px solid darkgreen;
+}
