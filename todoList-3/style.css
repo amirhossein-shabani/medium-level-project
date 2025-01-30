@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  position: relative;
+  left: 0px;
+  font-family: "Arial";
+  font-size: 35px;
+}
+h2 span {
+  margin-left: -3px;
+  padding: 0px 3px;
+  font-weight: 700;
+  background-color: orangered;
+  color: white;
+  border-radius: 2px;
+}
+.input-box {
+  width: 400px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  background-color: #ccc;
+  border-radius: 5px;
+  padding: 15px 10px;
+  font-size: 20px;
+  color: #333;
+
+}
+.add-item {
+  width: 400px;
+  border: none;
+  background-color: green;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: white;
+  box-shadow: 0 0  5px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: auto;
+  list-style: none;
+  background-color: #777 ; 
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.liItem {
+  position: relative;
+  width: 100%;
+  padding: 8px;
+  font-size: 20px;
+  color: whitesmoke;
+  display: grid;
+  grid-template-columns: auto 50px 25px; /* ستون اول اندازه خودکار */
+  gap: 5px; /* فاصله بین المان‌ها */
+  align-items: center;
+}
+
+.liItem p {
+  overflow-wrap: break-word; /* جلوگیری از خروج متن */
+  word-break: break-word; /* شکستن متن در صورت طولانی شدن */
+  white-space: normal; /* اجازه به چند لاینه شدن */
+  padding-right: 5px; /* کمی فاصله از دکمه‌ها */
+}
+
+
+.liItem:nth-child(even) {
+  background-color: #888;
+}
+
+.delete {
+  font-size: 45px;
+  color: darkorange;
+  transform: scale(0.8);
+  transition: transform 0.2s;
+  margin-left: 5px;
+}
+.delete:hover {
+  transform: scale(1);
+}
+
+.edit {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 5px 15px;
+  background-color: darkorange;
+  z-index: 2;
+}
+
+
+.input-e{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc ;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding-left: 10px;
+}

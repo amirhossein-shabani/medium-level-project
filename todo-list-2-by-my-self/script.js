@@ -5,6 +5,9 @@ function todoApp() {
   const list = document.querySelector(".list");
   let itemArray = JSON.parse(localStorage.getItem("item")) || [];
 
+  loadData();
+
+
   // ----------addItem-function ----------
   function addItem() {
     let value = input.value.trim();
@@ -174,7 +177,6 @@ function todoApp() {
   // --call the functions ---
   btn();
   enterKey();
-  loadData();
   draggableList(); 
   
 }
