@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins" ,sans-serif; outline: none; border: none; text-transform: capitalize; transition:  all .2s linear;
+}
+
+body{
+  background-color: #eee;
+
+}
+
+.container{
+  padding:25px 10% ;
+  text-align: center;
+}
+
+.container h1{
+  color: #333;
+}
+
+.container .heading{
+  font-size: 30px;
+  padding-bottom: 25px ;
+}
+
+.container #search-box{
+  width : 600px;
+  padding: 12px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  background: #e0e0e0;
+}
+
+.container .image-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 30px;
+
+}
+
+.container .image-container .image{
+  padding: 15px;
+  background-color: #fff;
+  box-shadow:  0 5px 10px rgba(0, 0, 0, 0.1);
+  width: 350px ;
+  border-radius: 10px;
+  animation: fadeIn .2s linear;
+}
+
+@keyframes fadeIn {
+  0%{
+    transform: scale(.5) translateY(-10px) ;
+    opacity: 0;
+  }
+}
+.container .image-container .image img{
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}  
+
+.container .image-container .image h3{
+  font-size: 20px;
+}
+
+@media (max-width:768px){
+  .cotnainer #search-box{
+    width: 100%;
+  }
+}
+
+@media (max-width:768px){
+  .container{
+    padding: 25px 20px;
+  }
+  .container .image-container .image{
+    width: 100%;
+  }
+}
