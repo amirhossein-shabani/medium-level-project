@@ -1,0 +1,262 @@
+/* google font for Poppins font in scc =  */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* initial codes for css =  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+header {
+  position: relative;
+  width: 1600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem auto 0;
+}
+
+.nav-header {
+  position:fixed;
+  width: 1600px;
+  height: 5rem;
+  background-color: #f0efef;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  opacity: .8;
+}
+.logo {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333333;
+  transition: all .4s;
+}
+
+.logo:hover{
+  transform:translateX(50px) scale(1.1);
+}
+
+.logo span {
+  color: darkorange;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+.nav-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-menu ul {
+  display: flex;
+  flex-direction: row;
+  padding-right: 2rem;
+}
+.nav-menu ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 3rem;
+  transition: all 0.3s;
+}
+.nav-menu ul li:hover {
+  background-color: #c2c2c2;
+}
+.nav-menu ul li a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: #333333;
+  transition: all .3s;
+}
+.nav-menu ul li:hover a {
+  color: black;
+  transform: scale(1.2);
+}
+section.h-text {
+  width: 1600px;
+  height: auto;
+  margin-top: 6rem;
+}
+.h-text h1,
+.h-text h3 {
+  margin-top: .5rem;
+}
+.h-text h1 {
+  font-size: 5rem;
+  color: #444444;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+.h-text h1 span {
+  background-color: darkorange;
+  padding: 0 1rem;
+  border-radius: 10px;
+  color: whitesmoke;
+}
+.h-text h3 {
+  width: 35%;
+  padding: 1rem 1rem 0rem 0;
+  border-radius: 0.4rem;
+  color: #474242;
+}
+main {
+  margin: 1rem auto;
+  position: relative;
+  width: 1600px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1;
+}
+.sec-1 {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.input-label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #666;
+}
+label h3{
+  font-size: 1.5rem;
+}
+#user-input{
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  padding: .5rem;
+  background-color: #e0dfdf;
+  border: none;
+  color: #474242;
+  outline: none;
+  font-weight: 600;
+  border-radius: .5rem 0 0 .5rem;
+}
+.btn{
+  padding: .5rem .6rem;
+  font-size: 1.4rem;
+  background-color: rgb(182, 52, 29);
+  font-weight: 600;
+  color: whitesmoke;
+  border: none;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+
+}
+
+.weather-result-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #474242;
+  background-color: rgb(248, 250, 245);
+  width: 100%;
+  height: auto;
+  padding: .5rem 0 1rem 1rem ;
+  opacity: .8;
+  border-radius: 1rem;
+}
+
+.weather-result-container  .right-sec{
+  color: darkorange;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.correct-format{
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.des{
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+.w-r{
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.background-picture{
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: url(/weather-app/image/clouds-2.jpg) no-repeat center / cover;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+
+@media (max-width:1500px){
+ header{
+  width: 100%;
+  max-width: 1000px;
+ }
+ .nav-header{
+  width: 100%;
+  max-width: 1000px;
+  opacity: .8;
+ }
+ section.h-text{
+  width: 100%;
+  max-width: 1000px;
+ }
+ .h-text h1{
+  font-size: 3.5rem;
+ }
+
+ main{
+  width: 100%;
+  max-width: 1000px;
+ }
+ .sec-1 {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.input-label {
+  font-size: 1.3rem;
+}
+label h3{
+  font-size: 1.2rem;
+}
+#user-input{
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  padding: .5rem;
+}
+.btn{
+  padding: .3rem .6rem .4rem .6rem;
+  font-size: 1.4rem;
+}
+.weather-result-container{
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+
+}

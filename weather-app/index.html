@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/weather-app/style.css" />
+    <title>Weather App | Simple Weather App for Iran</title>
+  </head>
+  <body>
+    <div class="background-picture">
+      <div class="container">
+        <header>
+          <div class="nav-header">
+            <div class="logo">
+              <p class="logo-text">Weather <span>App</span></p>
+            </div>
+
+            <div class="nav-menu">
+              <ul>
+                <li class="nav-item">
+                  <a href="/weather-app/index.html">Home</a>
+                </li>
+                <li class="nav-item"><a href="">About us</a></li>
+                <li class="nav-item"><a href="">Contact us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <section class="h-text">
+            <h1>This is a <span>Weather App</span></h1>
+            <h3>notic : <br />you can wirte your city name by persion</h3>
+          </section>
+        </header>
+
+        <main>
+          <section class="sec-1">
+            <label for="user-input" class="input-label">
+              <h3>City or Country Name :</h3>
+              <input
+                type="text"
+                id="user-input"
+                placeholder="for example : Tehran "
+              />
+              <button class="btn">Search</button>
+            </label>
+
+            <div class="weather-result-container">
+              <div class="left-sec">
+                <p class="country">country sys : </p>
+                <p class="city-name"> City Name : <p>
+                <p class="date"> Date : </P>
+                <p class="weekday"> week day : </P>
+                <p class="sunrise"> sunrise : </P>
+                <p class="sunset"> sunset : </P>
+                <p class="temp"> Temperature : </P>
+                <p class="temp temp-min"> min-temp : </P>
+                <p class="temp temp-max"> max-temp : </P>
+                <p class="w-c"> W conditions : </P>
+                <p class="w-d"> description : </P>
+              </div>
+              </div>
+            </div>
+          </section>
+          <section class="sec-2"></section>
+        </main>
+      </div>
+    </div>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="/weather-app/script.js" type="module"></script>
+  </body>
+</html>
