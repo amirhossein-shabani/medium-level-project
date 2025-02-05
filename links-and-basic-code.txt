@@ -15,3 +15,8 @@ initial codes for css =
   box-sizing: border-box;
   font-family: "Poppins" ,sans-serif;
 }
+
+
+my Api key for openWeatherApi = 
+
+"46d0e26a9f557b1e5149733b8dd45a0f"
