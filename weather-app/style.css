@@ -27,6 +27,12 @@ body{
   text-align: center;
 }
 
+.h-text{
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: flex-start;
+}
+
 .search{
   width: 100%;
   display: flex;
