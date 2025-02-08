@@ -64,7 +64,8 @@ section.game-container{
   grid-template-rows: repeat(3 , 1fr);
   gap: 5px;
 }
-button{
+
+.game-container button{
   background-color:  transparent;
   opacity: .5;
 }
@@ -78,4 +79,41 @@ button i{
 button i.win{
   color: green;
   text-shadow: 0 0 30px  rgb(80, 155, 80);
+}
+
+.scoreboard{
+  margin-top: 15px;
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+}
+
+.scoreboard h2{
+ color: darkorange;
+}
+
+.scoreboard p{
+  margin-bottom: 7px;
+  color: #ccc;
+  font-weight: 400;
+  font-size: 18px;
+  padding-left: 4px;
+}
+.scoreboard p span{
+  color: darkorange;
+  font-size: 20px;
+  font-weight: 700;
+}
+.scoreboard button{
+  margin-top: 10px;
+  width: 300px;
+  padding: 10px 10px;
+  background-color: darkred;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  font-size: 20px;
+  font-weight: 400;
+  color: white ;
+
 }
