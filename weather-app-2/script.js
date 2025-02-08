@@ -78,6 +78,7 @@ async function updateWeatherInfo(city) {
     wind: { speed },
   } = weatherData;
 
+
   cityTxt.textContent = cityName;
   tempTxt.textContent = Math.round(temp) + " °C";
   conditionTxt.textContent = main;
@@ -86,9 +87,8 @@ async function updateWeatherInfo(city) {
   currentDateTxt.textContent = getCurrentDate();
 
   await updateForecastsInfo(city);
-  weatherSummaryImg.src = `/weather-app-2/assets/assets/weather/${getWeatherIcon(
-    id
-  )}`;
+
+  weatherSummaryImg.src = `/weather-app-2/assets/assets/weather/${getWeatherIcon(id)}`;
 
   showDisplaySection(weatherInfoSection);
 }
@@ -97,6 +97,7 @@ async function updateForecastsInfo(city) {
   const forecastsData = await getFetchData("forecast", city);
   const timeTaken = "12:00:00";
   const todayDate = new Date().toISOString().split("T")[0];
+
 
   forecastItemsContainer.innerHTML = "";
   forecastsData.list.forEach((forecastWeather) => {
@@ -109,7 +110,8 @@ async function updateForecastsInfo(city) {
   });
 }
 
-function updateForecastItems(weatherData) {
+function updateForecastItems(weatherData) { 
+  
   const {
     dt_txt: date,
     weather: [{ id }],
