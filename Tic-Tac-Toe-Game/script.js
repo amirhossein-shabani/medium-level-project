@@ -108,6 +108,12 @@ function resetScore(){
   localStorage.setItem('xWins' , 0);
   localStorage.setItem('oWins' , 0);
 
+  // xWins and oWins reset the in-memory variable 
+  xWins = 0 ; 
+  oWins = 0 ; 
+  
   document.getElementById('x-score').textContent = 0  ;
   document.getElementById('o-score').textContent = 0  ;
 }
+
+
