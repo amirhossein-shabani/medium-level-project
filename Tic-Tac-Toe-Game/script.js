@@ -41,6 +41,8 @@ function checkWinner() {
     if (board[a] && board[a] === board[b] && board[a] === board[c]) {
       // Check if all three position have the same symbol (x or o)
       // we found a winner !
+
+      // set color green for those boards are matched with patterns win .and we do this with adding win class to them .   
       document
         .querySelectorAll(".btn")
         [a].querySelector("i")
@@ -112,8 +114,8 @@ function resetScore(){
   xWins = 0 ; 
   oWins = 0 ; 
   
-  document.getElementById('x-score').textContent = 0  ;
-  document.getElementById('o-score').textContent = 0  ;
+  document.getElementById('x-score').textContent = xWins  ;
+  document.getElementById('o-score').textContent = oWins  ;
 }
 
 
