@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/**
+* ! initial codes for css =  
+**/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/**
+* ! navbar style  : 
+**/
+
+i{
+  cursor: pointer;
+}
+
+
+.navbar {
+  background-color: #212529;
+  color: white;
+  padding: 25px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.navbar a{
+  text-decoration: none;
+  color: white;
+}
+
+.navbar h2{
+  font-weight: 500;
+}
+
+.navbar h2 span{
+  color: darkorange;
+  font-weight: 800;
+}
+
+.cart {
+  position: relative;
+  background-color: #fff;
+  color: #212529;
+  padding: 5px;
+  font-size: 30px;
+  border-radius: 4px;
+}
+
+.cartAmount {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  font-size: 16px;
+  background-color: red;
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+/**
+* !Shop items style are here 
+**/
+
+.shop {
+  display: grid;
+  grid-template-columns: repeat(4, 223px);
+  gap: 30px;
+  justify-content: center;
+}
+
+@media (max-width: 1000px){
+  .shop{
+    grid-template-columns: repeat(2,  223px);
+  }
+}
+
+@media (max-width: 500px){
+  .shop{
+    grid-template-columns: repeat(1 ,  223px);
+  }
+}
+
+.item {
+  border: 1px solid #ababab;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: all .3s;
+}
+
+.item:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+
+.details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+
+.details:nth-child(2){
+  color: #444;
+  font-size: 14px;
+}
+
+.price-quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-quantity h2 {
+  font-size: 25px;
+  color: #444;
+}
+
+
+.buttons{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+
+.fa-minus{
+  color: red;
+}
+
+.fa-plus{
+  color: green;
+}
+
+
+/* ------------style-for-cart.html file------------- */
+
+/**
+*  !both html file linked by one style.css file , so we can use one css file style for two or more html file . 
+**/
+
+
+.text-center{
+  text-align: center;
+  color: #212529;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.homeBtn{
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.fa-xmark{
+  color: red;
+  font-weight: bold;
+}
+
+/**
+* ! style rules for shopping-cart
+**/
+
+.shopping-cart{
+  display: grid;
+  grid-template-columns: repeat(1,320px);
+  justify-content: center;
+  gap: 15px;
+}
+
+/**
+* ! style rules for cart-item
+**/
+
+.cart-item img{
+  border-radius: 2px;
+}
+
+.cart-item{
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: all .3s;
+  display: flex;
+  overflow: hidden;
+  outline: none;
+  padding: 4px 6px;
+}
+.cart-item:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.title-price-x{
+  width: 195px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title-price{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item-price{
+background-color: #999;
+color: white;
+border-radius: 4px;
+padding: 3px 6px;
+font-weight: 600;
+transition: color .3s;
+}
+
+.cart-item:hover .cart-item-price{
+background-color: #777;
+}
+
+.checkout {
+  background-color: green;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.remove-all{
+  background-color: rgb(197, 3, 3);
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.checkout , .remove-all{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
